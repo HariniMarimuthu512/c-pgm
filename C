@@ -685,3 +685,22 @@ before copy s1=harini s2=nishanth
 string after copy s1=harini s2=harini
 
 === Code Execution Successful ===
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<string.h>
+int main() {
+    char s1[20],s2[20];
+    gets(s1);
+    //gets(s2);
+    printf("before ncopy s1=%s s2=%s",s1,s2);
+    strncpy(s2,s1,6);
+    printf("\nstring after ncopy s1=%s s2=%s",s1,s2);
+
+    return 0;
+}
+O/P:
+harinimarimuthu
+before ncopy s1=harinimarimuthu s2=@
+string after ncopy s1=harinimarimuthu s2=harini
+
+=== Code Execution Successful ===
