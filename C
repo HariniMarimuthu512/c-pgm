@@ -747,3 +747,27 @@ before concatination s1=Marimuthu s2=Harini
 string after concatination s1=Marimuthu s2=Harini M
 
 === Code Execution Successful ===
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<string.h>
+int main() {
+    char s1[20],s2[20];
+    gets(s1);
+    gets(s2);
+    printf("s1=%s s2=%s",s1,s2);
+    int r=strcmp(s1,s2);
+    if(r==0)
+    printf("both are equal");
+    else if(r>0)
+    printf("s1 is bigger");
+    else
+    printf("s2 is bigger");
+
+    return 0;
+}
+o/p:
+harini
+harinim
+s1=harini s2=harinims2 is bigger
+
+=== Code Execution Successful ===
