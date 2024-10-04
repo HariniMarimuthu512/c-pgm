@@ -800,3 +800,23 @@ s1=harini s2=hasini
 both are equal
 
 === Code Execution Successful ===
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int a,b;
+    scanf("%d %d",&a,&b);
+    printf("a=%d,b=%d",a,b);
+    a=a^b;
+    b=a^b;
+    a=a^b;
+    printf("\na=%d, b=%d",a,b);
+    return 0;
+}
+o/p:
+-24 0
+a=-24,b=0
+a=0, b=-24
+
+=== Code Execution Successful ===
