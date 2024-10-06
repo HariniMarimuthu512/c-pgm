@@ -888,3 +888,119 @@ o/p:
 4	5
 5	7
 6	-1
+
+
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int size,n;
+    printf("enter the size of array:");
+    scanf("%d",&size);
+    printf("enter the no.of elements you want(size>=n):");
+    scanf("%d",&n);
+    int arr[size];
+    for(int i=0;i<n;i++)
+    scanf("%d",&arr[i]);
+    int ch;
+    printf("pick ur choice \n1.display \n2.insertion @ pos \n3.append \n4.delete @ pos \n5.replacement \n6.search \n7.insert @ beginning");
+    scanf("%d",ch);
+    switch{
+        case 1:
+        for(int i=0;i<n;i++)
+        printf("%d ",arr[i]);
+        break;
+        case 2:
+        int pos,ele;
+        printf("enter the pos & ele:");
+        scanf("%d %d",pos,ele);
+        if(size == n)
+        {
+        printf("the array is full");
+        printf("still! you want to insert ele?(1.yes\n2.no");
+        int choice;
+        scanf("%d",&choice);
+        switch(choice)
+        {
+            case 1:
+            size=size+1;
+            for(int i=size;i>=0;i--){
+                arr[i+1]=arr[i];
+                if(i==pos)
+                {
+                    arr[i]=pos;
+                    break;
+                }
+            }
+            case 2:
+            break;
+        }
+        }
+        else{
+            n=n+1;
+            for(int i=n;i>=0;i++)
+            {
+                arr[i+1]=arr[i];
+                if(i==pos)
+                {
+                    arr[i]=pos;
+                    break;
+                }
+            }
+        }
+        break;
+        case 3:
+        int ele;
+        printf("enter the appending ele:");
+        scanf("%d ",ele);
+        if(size == n)
+        {
+        printf("the array is full");
+        printf("still! you want to insert ele?(1.yes\n2.no");
+        int choice;
+        scanf("%d",&choice);
+        switch(choice)
+        {
+            case 1:
+            size=size+1;
+            arr[size-1]=ele;
+            case 2:
+            break;
+        }
+        break;
+        }
+        case 4:
+        int pos;
+        printf("enter the ele you want to delete @ po:");
+        scanf("%d",&pos);
+        if(n==0)
+        printf("array is empty!!");
+        if(pos>n)
+        printf("invalid input...!");
+        for(int i=pos;i<n-1;i++)
+            arr[i]=arr[i+1];
+        break;
+        case 5:
+        int pos,r_ele;
+        printf("enter the replce pos & ele:");
+        scanf("%d %d",pos,r_ele);
+        arr[pos-1]=ele;
+        break;
+        case 6:
+        int s_ele;
+        printf("enter")
+        scanf("%d",&s_ele);
+        for(int i=0;i<n;i++){
+            if(arr[i] == s_ele){
+            printf("the %d element founded",s_ele);
+            flag++;
+            break
+            }
+        }
+        if(flag!=0)
+        printf("the searching element %d is not present in array",s_ele);
+        break;
+        case 7:
+    }
+    return 0;
+}
